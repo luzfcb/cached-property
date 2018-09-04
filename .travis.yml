@@ -15,8 +15,11 @@ matrix:
     - python: 2.7
       dist: trusty
     - python: pypy
+  allow_failures:
+    - python: 3.8-dev
+      sudo: required
+      dist: xenial
   fast_finish: true
-
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements.txt
 
